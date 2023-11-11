@@ -1,0 +1,6 @@
+openai
+termcolor
+python-dotenv
+langchain
+stdlib-list
+python-Levenshtein

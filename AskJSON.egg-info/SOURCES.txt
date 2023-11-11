@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+AskJSON.egg-info/PKG-INFO
+AskJSON.egg-info/SOURCES.txt
+AskJSON.egg-info/dependency_links.txt
+AskJSON.egg-info/requires.txt
+AskJSON.egg-info/top_level.txt
+askjson/__Init__.py
+askjson/utils.py
