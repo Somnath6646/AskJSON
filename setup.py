@@ -6,7 +6,7 @@ with open('README.md', 'r', encoding='utf-8') as f:
 
 setup(
     name='AskJSON',
-    version='0.1.0',
+    version='0.1.1',
     packages=find_packages(),
     install_requires=[
         'openai',
@@ -16,12 +16,12 @@ setup(
         'stdlib-list',
         'python-Levenshtein',  # If this is a required dependency, it should be listed here.
     ],
-    author='Your Name',  # Replace with your name
-    author_email='your.email@example.com',  # Replace with your email address
-    description='A library to ask questions to JSON data and get Python code in response.',
+    author='Somnath Mishra',  # Replace with your name
+    author_email='somnathmishra6646@gmail.com',  # Replace with your email address
+    description='A library to ask questions in natural language to JSON data',
     long_description=long_description,
     long_description_content_type='text/markdown',
-    url='https://github.com/somnath6646/AskJSON',  # Replace with the actual URL to your project repository
+    url='https://github.com/Somnath6646/AskJSON',  # Replace with the actual URL to your project repository
     classifiers=[
         # Classifiers help users find your project by categorizing it.
         "Programming Language :: Python :: 3",
@@ -34,9 +34,9 @@ setup(
     python_requires='>=3.6',
     keywords='json query ai openai python code generation',  # Add some relevant keywords
     project_urls={  # Optional
-        'Bug Tracker': 'https://github.com/yourusername/AskJSON/issues',
-        'Documentation': 'https://github.com/yourusername/AskJSON#readme',
-        'Source Code': 'https://github.com/yourusername/AskJSON',
+        'Bug Tracker': 'https://github.com/Somnath6646/AskJSON/issues',
+        'Documentation': 'https://github.com/Somnath6646/AskJSON#readme',
+        'Source Code': 'https://github.com/Somnath6646/AskJSON',
         # Add any other relevant links
     },
     include_package_data=True,  # Includes files specified by MANIFEST.in
