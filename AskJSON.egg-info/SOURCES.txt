@@ -1,5 +1,10 @@
+.DS_Store
+.gitignore
 LICENSE
 README.md
+main.py
+requirements.txt
+sample.json
 setup.py
 AskJSON.egg-info/PKG-INFO
 AskJSON.egg-info/SOURCES.txt
@@ -8,3 +13,5 @@ AskJSON.egg-info/requires.txt
 AskJSON.egg-info/top_level.txt
 askjson/__Init__.py
 askjson/utils.py
+askjson/__pycache__/__init__.cpython-38.pyc
+askjson/__pycache__/utils.cpython-38.pyc

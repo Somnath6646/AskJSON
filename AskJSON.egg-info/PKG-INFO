@@ -1,13 +1,53 @@
 Metadata-Version: 2.1
 Name: AskJSON
-Version: 0.1.0
-Summary: A library to ask questions to JSON data and get Python code in response.
-Home-page: https://github.com/yourusername/AskJSON
-Author: Your Name
-Author-email: your.email@example.com
+Version: 0.1.1
+Summary: A library to ask questions in natural language to JSON data
+Home-page: https://github.com/Somnath6646/AskJSON
+Author: Somnath Mishra
+Author-email: somnathmishra6646@gmail.com
+Project-URL: Bug Tracker, https://github.com/Somnath6646/AskJSON/issues
+Project-URL: Documentation, https://github.com/Somnath6646/AskJSON#readme
+Project-URL: Source Code, https://github.com/Somnath6646/AskJSON
+Keywords: json query ai openai python code generation
 Classifier: Programming Language :: Python :: 3
 Classifier: License :: OSI Approved :: MIT License
 Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Utilities
 Requires-Python: >=3.6
 Description-Content-Type: text/markdown
 License-File: LICENSE
+
+
+### AskJSON
+
+As the name suggests, `AskJSON` helps you fetch answers or data from your json using natural language. It uses OpenAI API.
+
+#### How to Use AskJSON:
+
+1. Install the package using pip:
+
+   ```
+   pip install AskJSON
+   ```
+2. Set your OpenAI API key as an environment variable:
+
+   ```
+   export OPENAI_API_KEY='your_api_key_here'
+   ```
+3. In your Python script, import `ask_json` and call it with your JSON and query:
+
+   ```python
+   from askjson import ask_json
+
+   my_json_data = {...}  # Your JSON data here
+   my_query = "How many items are in the list?"
+
+   result_code = ask_json(my_json_data, my_query)
+   print(result_code)
+   ```
+
+#### Todo:
+
+- have support for codellama
