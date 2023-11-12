@@ -1,5 +1,4 @@
-import json
-import openai
+from openai import OpenAI
 from termcolor import colored
 import sys
 import os
@@ -13,8 +12,12 @@ from stdlib_list import stdlib_list
 STDLIB = set(stdlib_list())
 load_dotenv()
 
-openai.api_key = os.getenv('OPENAI_API_KEY')
-if not openai.api_key:
+OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
+client = OpenAI(
+    api_key=OPENAI_API_KEY,
+)
+
+if not OPENAI_API_KEY:
     raise ValueError("OPENAI_API_KEY environment variable not set.")
 
 def describe_json(json_obj, depth=0):
@@ -58,10 +61,21 @@ def describe_json(json_obj, depth=0):
 
     return description
 
+def format_files(code):
+    # Split the code into lines
+    lines = code.split('\n')
+
+    # Remove the first and last lines
+    if len(lines) >= 2:
+        del lines[0]
+        del lines[-1]
+    modified_code = '\n'.join(lines)
+
+    return modified_code
 
 
-def generate_response(prompt, model="gpt-4", max_tokens=1000):
-    response = openai.ChatCompletion.create(
+def generate_response(prompt, model, max_tokens=1000):
+    response = client.chat.completions.create(
         model=model,
         messages=[{"role": "system", "content": prompt}],
         max_tokens=max_tokens,
@@ -77,11 +91,11 @@ def generate_response(prompt, model="gpt-4", max_tokens=1000):
         print(colored(res["content"], "yellow"), end='', flush=True)   
         answer = answer+res["content"]
         
-        
-      event_text = event['choices'][0]['delta']  
+      event_text = dict(dict(dict(event)['choices'][0])['delta'])
       res = event_text
 
-    return answer
+    
+    return format_files(answer)
 
 
 def execute_api_code(code):
