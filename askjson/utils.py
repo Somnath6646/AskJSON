@@ -1,4 +1,3 @@
-import json
 import openai
 from termcolor import colored
 import sys
